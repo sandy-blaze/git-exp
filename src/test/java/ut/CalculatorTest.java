@@ -51,4 +51,9 @@ public class CalculatorTest {
 	public void testAdd1() {
 		assertTrue(cl.doAdd(14, 3) == 17);
 	}
+	
+	@Test
+	public void testPow() {
+		assertTrue(cl.doPower(2, 10) == 1024);
+	}
 }
