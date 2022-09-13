@@ -19,7 +19,7 @@ public class Calculator {
 	}
 	
 	public double doPower(double num, int exp) {
-		if (exp == 1) return 1.0;
+		if (exp == 0) return 1.0;
 		double half_power = doPower(num, exp / 2);
 		if (exp % 2 == 0) return half_power * half_power;
 		return num * half_power * half_power;
