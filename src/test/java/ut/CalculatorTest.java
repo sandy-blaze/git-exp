@@ -46,4 +46,9 @@ public class CalculatorTest {
 	public void testDiv1() {
 		assertTrue(cl.doDiv(14, 2) == 7);
 	}
+	
+	@Test
+	public void testAdd1() {
+		assertTrue(cl.doAdd(14, 2) == 16);
+	}
 }
