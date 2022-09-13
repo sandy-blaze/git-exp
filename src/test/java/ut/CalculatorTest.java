@@ -54,6 +54,6 @@ public class CalculatorTest {
 	
 	@Test
 	public void testPow() {
-		assertTrue(cl.doPower(2, 10) === 1024);
+		assertTrue(cl.doPower(2, 10) == 1024);
 	}
 }
