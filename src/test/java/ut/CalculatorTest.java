@@ -49,6 +49,6 @@ public class CalculatorTest {
 	
 	@Test
 	public void testAdd1() {
-		assertTrue(cl.doAdd(14, 2) == 16);
+		assertTrue(cl.doAdd(14, 3) == 17);
 	}
 }
