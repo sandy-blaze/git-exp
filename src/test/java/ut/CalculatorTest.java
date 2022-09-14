@@ -1,6 +1,6 @@
 package ut;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -24,36 +24,36 @@ public class CalculatorTest {
 
 	@Test
 	public void testAdd() {
-		assertTrue(cl.doAdd(1, 2) == 3);
+		assertEquals(3, (int)cl.doAdd(1, 2));
 	}	
 
 	@Test
 	public void testSub() {
-		assertTrue(cl.doSub(1, 1) == 0);
+		assertEquals(0, (int)cl.doSub(1, 1));
 	}
 
 	@Test
 	public void testMul() {
-		assertTrue(cl.doMul(9, 2) == 18);
+		assertEquals(18, (int)cl.doMul(9, 2));
 	}
 
 	@Test
 	public void testDiv() {
-		assertTrue(cl.doDiv(8, 2) == 4);
+		assertEquals(4, (int)cl.doDiv(8, 2));
 	}
 
 	@Test
 	public void testDiv1() {
-		assertTrue(cl.doDiv(14, 2) == 7);
+		assertEquals(7, (int)cl.doDiv(14, 2));
 	}
 	
 	@Test
 	public void testAdd1() {
-		assertTrue(cl.doAdd(14, 3) == 17);
+		assertEquals(17, (int)cl.doAdd(14, 3));
 	}
 	
 	@Test
 	public void testPow() {
-		assertTrue(cl.doPower(2, 10) == 1024);
+		assertEquals(1024, (int)cl.doPower(2, 10));
 	}
 }
