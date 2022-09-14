@@ -19,9 +19,9 @@ public class Calculator {
 	
 	public double doPower(double n, int exp) {
 		if (exp == 0) return 1.0;
-		double half_power = doPower(n, exp / 2);
-		if (exp % 2 == 0) return half_power * half_power;
-		return n * half_power * half_power;
+		double halfPower = doPower(n, exp / 2);
+		if (exp % 2 == 0) return halfPower * halfPower;
+		return n * halfPower * halfPower;
 	}
 
 }
