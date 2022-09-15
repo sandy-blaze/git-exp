@@ -13,20 +13,22 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class CalculatorServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	double res;
+	static double res;
     public CalculatorServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) 
+    @Override
+    public synchronized void doGet(HttpServletRequest request, HttpServletResponse response) 
     		throws IOException, ServletException 
     	{
     		try {
     			doPost(request, response);
     		} catch (Exception e) {}
     	}
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    
+    @Override
+	public synchronized void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			PrintWriter out = response.getWriter();
 			String n1 = request.getParameter("no1");

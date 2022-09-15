@@ -16,11 +16,11 @@
 		<maven.compiler.target>1.7</maven.compiler.target>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<sonar.projectKey>calculator</sonar.projectKey>
+		<sonar.projectKey>Calculator</sonar.projectKey>
 		<sonar.language>java</sonar.language>
 		<sonar.host.url>http://localhost:9000</sonar.host.url>
-		<sonar.login>admin</sonar.login>
-		<sonar.password>password</sonar.password>
+		<sonar.login>sqp_12086e8cda066c1f630eee0167eb81e34fb846a9</sonar.login>
+		<!--<sonar.password>password</sonar.password>-->
 
 	</properties>
 
