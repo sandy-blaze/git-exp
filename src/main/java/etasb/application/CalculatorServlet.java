@@ -22,29 +22,32 @@ public class CalculatorServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) 
     		throws IOException, ServletException 
     	{
-    		doPost(request, response);
+    		try {
+    			doPost(request, response);
+    		} catch (Exception e) {}
     	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-		String n1 = request.getParameter("no1");
-		String n2 = request.getParameter("no2");
-		int opt = Integer.parseInt(request.getParameter("opt"));
-		
-		switch(opt) {
-		case 1 : 
-			res = new Calculator().doAdd(Integer.parseInt(n1), Integer.parseInt(n2));
-			break;
-		case 2 : 
-			res = new Calculator().doSub(Integer.parseInt(n1), Integer.parseInt(n2));
-			break;
-		case 3 : 
-			res = new Calculator().doMul(Integer.parseInt(n1), Integer.parseInt(n2));
-			break;	
-		case 4 : 
-			res = new Calculator().doDiv(Integer.parseInt(n1), Integer.parseInt(n2));
-			break;
-		}
-		out.println(res);
+		try {
+			PrintWriter out = response.getWriter();
+			String n1 = request.getParameter("no1");
+			String n2 = request.getParameter("no2");
+			int opt = Integer.parseInt(request.getParameter("opt"));
+			switch(opt) {
+				case 1 : 
+					res = new Calculator().doAdd(Integer.parseInt(n1), Integer.parseInt(n2));
+					break;
+				case 2 : 
+					res = new Calculator().doSub(Integer.parseInt(n1), Integer.parseInt(n2));
+					break;
+				case 3 : 
+					res = new Calculator().doMul(Integer.parseInt(n1), Integer.parseInt(n2));
+					break;	
+				case 4 : 
+					res = new Calculator().doDiv(Integer.parseInt(n1), Integer.parseInt(n2));
+					break;
+			}
+			out.println(res);
+		} catch (Exception e) {}
 	}
 
 }
